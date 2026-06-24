@@ -1,0 +1,589 @@
+ 
+ 
+ 
+  
+Revenue Cycle 
+ 
+Page 1 of 12 
+Financial Assistance Program     
+ 
+ 
+Origination 
+Date:   
+2/04/2009      
+Last 
+Revision 
+Date:   
+10/3/2025, 
+11/14/2025  
+ 
+ 
+1. POLICY STATEMENT 
+ 
+1.1 Grady Health System (“Grady”) refers to Grady Memorial Hospital Corporation and all affiliated locations, 
+programs, and covered entities operating under this policy, including Children’s at Hughes Spalding. 
+Grady is committed to providing high-quality, compassionate care to all patients, including those seeking 
+emergency or medically necessary services, regardless of their ability to pay. This commitment includes 
+providing care in a manner that is equitable, respectful, and culturally sensitive. 
+Grady complies with all applicable Federal civil rights laws and does not discriminate, exclude, or treat 
+individuals differently based on race, color, national origin, age, disability, or sex. Equal access to emergency 
+and medically necessary care is a fundamental principle of Grady Health System, and all patients will be 
+treated fairly and without bias. 
+2. PURPOSE 
+2.1 The purpose of this Financial Assistance Program (FAP) policy is to support our mission of providing care 
+with compassion, integrity, and respect. This policy outlines the process for identifying and assisting patients 
+who may be unable to pay for services, ensuring compliance with applicable federal regulations, including IRS 
+§501(r). It reinforces our commitment to removing financial barriers, promoting healthcare access, and 
+upholding the highest standards of clinical and ethical care. 
+3. DEFINITIONS   
+The following definitions support our Financial Assistance Policy (FAP) and clarify the terms and procedures 
+for those seeking financial help: 
+3.1 Amounts Generally Billed (AGB)  
+“Amounts Generally Billed” (AGB) refers to the maximum amount that Grady will charge a patient who 
+qualifies for financial assistance. This amount will not exceed the amounts generally billed to individuals who 
+have insurance covering such care. AGB is calculated annually using the look-back method, based on actual 
+payments received from Medicare fee-for-service and private health insurers. 
+3.2 Application Period  
+The “Application Period” begins on the date care is provided and extends through the 240th day after the 
+date of the first post-discharge billing statement. Individuals may apply for financial assistance before care is 
+provided, during the course of treatment, or at any time within this 240-day window. During this period, the 
+patient or their authorized representative may submit a complete or incomplete application for financial 
+assistance. 
+ 
+Page 2 of 12 
+3.3 Covered Entity  
+A healthcare facility or medical group covered under this policy. For the purposes of this policy, covered 
+entities include providers that deliver emergency services for the treatment of emergency medical 
+conditions, as defined under the Emergency Medical Treatment and Labor Act (EMTALA). 
+3.4 Extraordinary Collection Actions (ECAs) - Treasury Regulation § 1.501(r)-6(b)  
+This regulation defines what constitutes an Extraordinary Collection Action by a hospital organization against 
+an individual in connection with unpaid hospital bills, under the requirements of Section 501(r) of the 
+Internal Revenue Code. 
+3.5 Federal Poverty Guidelines (FPG)  
+The “Federal Poverty Guidelines” (FPG), issued annually by the United States Department of Health and 
+Human Services, are used to assess financial need and determine eligibility for financial assistance. Grady 
+uses the FPG to evaluate income levels and apply sliding scale discounts or full charity care accordingly. 
+3.6 Federal Poverty Level (FPL)  
+“Federal Poverty Level” is a measure of income level issued annually and used to determine financial 
+eligibility for assistance. FPL thresholds are set by the federal government and vary by household size. 
+Eligibility for financial assistance is based on a percentage of the FPL, as outlined in the Financial Assistance 
+Program Policy. 
+3.7 Financial Assistance or Charity Care Program  
+Grady offers a Financial Assistance or Charity Care Program that provides free or discounted care to eligible 
+patients who are unable to pay for all or part of their hospital bills. Eligibility for assistance is based on family 
+income, household size, and adherence to application procedures within the defined Application Period. 
+3.8 Insured Patients  
+Individuals who have active health insurance coverage through private insurers, government programs (such 
+as Medicare or Medicaid), employer-sponsored plans, or other recognized sources. These patients’ medical 
+and hospital expenses are billed to and processed by their insurance provider, which reimburses the hospital 
+in accordance with the terms of the applicable insurance policy. 
+3.9 Medically Necessary Services  
+Medically Necessary Services are health care services or supplies needed to prevent, diagnose, or treat an 
+illness, injury, condition, disease, or its symptoms and that meet accepted standards of medicine. These 
+services may include physician visits, hospital care, diagnostic testing, surgery, and prescription drugs, 
+provided they are appropriate and essential for the patient’s health and not primarily for convenience. 
+3.10 Unhoused Category – No Copayment Requirement  
+Patients who meet the definition of homelessness, as defined by the U.S. Department of Housing and Urban 
+Development (HUD), may be eligible for financial assistance without a copayment requirement. 
+HUD Definition of Homelessness 
+A “homeless individual” includes: 
+ 
+Page 3 of 12 
+a. An individual who lacks a fixed, regular, and adequate nighttime residence; and 
+b. An individual whose primary nighttime residence is: 
+1. A supervised publicly or privately operated shelter designed to provide temporary living 
+accommodations (including welfare hotels, congregate shelters, cars, or transitional housing for 
+individuals with mental illness); 
+2. An institution that provides temporary residence for individuals who are being institutionalized;  
+3. A public or private place not designed for, or ordinarily used as, regular sleeping accommodation for 
+human beings. 
+Reference: Federal Register, Homeless Emergency Assistance and Rapid Transition to Housing: Defining 
+“Homeless”, U.S. Department of Housing and Urban Development 
+https://www.federalregister.gov/documents/2011/12/05/2011-30942/homeless-emergency-assistance-and-
+rapid-transition-to-housing-defining-homeless 
+4. FINANCIAL ASSISTANCE PROGRAM 
+4.1 Eligibility Criteria 
+Residents of Fulton and DeKalb Counties with household incomes at or below 400% of the Federal Poverty 
+Level (FPL) are eligible for financial assistance under this policy. 
+4.2 Out-of-County Eligibility 
+Residents of other counties may qualify for financial assistance for certain types of medical care.  Specifically, 
+financial assistance may be available for the following services: 
+• 
+Emergency Services: If a patient experiences a medical emergency, they may qualify for financial 
+assistance regardless of their county of residence. 
+• 
+Related Inpatient Admissions: If the emergency visit results in a hospital admission, the costs 
+associated with that inpatient stay may also be eligible for financial assistance. 
+• 
+Related Post-Discharge Care: After being discharged from the hospital, patients may need a follow-
+up visit. Financial assistance may extend to these related services as well, provided they are 
+connected to the initial emergency or inpatient care. 
+4.3 Medicaid Eligibility 
+All individuals who are eligible and approved for Medicaid are considered qualified for financial assistance. 
+4.4 Ineligibility Criteria 
+Individuals residing outside of Fulton and DeKalb Counties who receive non-emergent care that is not 
+associated with an emergency admission are not eligible for financial assistance under this policy. 
+5. AUTOMATED FINANCIAL ASSISTANCE DETERMINATION 
+5.1 Presumptive Assessment 
+At the time of registration, during address verification, each patient is electronically assessed for a Federal 
+Poverty Level (FPL) ranking using automated third-party presumptive eligibility software. 
+5.2 FPL Determination ≤ 400% 
+If the automated system determines that a patient’s income is between 0% and 400% of the FPL, the FPL 
+percentage is recorded in the “FPL%” field of the patient’s account. The patient is then automatically 
+qualified for the applicable financial assistance discount. 
+ 
+ 
+Page 4 of 12 
+5.3 FPL Determination > 400% 
+If the system determines that the patient’s income exceeds 400% of the Federal Poverty Level (FPL), a value 
+is entered in the “FPL Status” field to indicate that the patient is over-income and not presumptively eligible 
+for financial assistance. 
+5.4 Undetermined FPL Status 
+If the automated system cannot determine a patient's FPL status (e.g., due to missing SSN, insufficient data, 
+or system mismatch), and the “FPL%” field remains blank, the patient may: 
+• 
+Request a repeat of the automated process, or 
+• 
+Submit a manual application for financial assistance. 
+5.5 Secondary Assessment at Billing 
+At the time of billing, the automated financial assistance determination process is repeated for any patient 
+account without an existing entry in the FPL% field. 
+6. REQUESTING A GREATER DISCOUNT LEVEL 
+6.1 Patients who qualify for automated (presumptive) financial assistance but do not receive the maximum 
+available discount will be notified on Statement One (1). This notice will inform the patient that they did not 
+qualify for the highest discount level and will provide instructions on how to request a reassessment. 
+6.2 Patients may request a repeat of the automated eligibility process or apply for financial assistance 
+through the manual application process. 
+7. MANUAL FINANCIAL ASSISTANCE POLICY DETERMINATION 
+ 
+7.1 Application Period 
+During the application period, patients may apply for financial assistance at any time using the manual 
+process. 
+7.2 How to Apply for the Financial Assistance Program 
+Patients may apply using one of the following methods: 
+• 
+“Digital Front Door: Access and Use of Epic MyChart” 
+ 
+• 
+Fax: 404.489.6864 
+• 
+Mail: 
+Grady Memorial Hospital   
+80 Jesse Hill Jr. Dr. SE   
+PO Box 26071   
+Atlanta, GA 30303   
+Attn: Financial Assistance Program – Mail-In Packets   
+ 
+Requesting a Mail-In Packet 
+Patients may request a Financial Assistance Program mail-in packet by calling 404.616.6920, and selecting 
+option 1 to speak with a Patient Financial Counselor. Financial Counselors are available Monday through 
+Friday, from 7:00 a.m. – 3:30 p.m. 
+ 
+ 
+ 
+Page 5 of 12  
+ 
+Application Review 
+Once the completed application and all required documents are received, a member of the Financial 
+Counseling team will contact the patient with an update within 24 hours. 
+Walk-In Assistance 
+Walk-in visits are welcome. Patients will be provided with an application and guidance on how to complete it, 
+including the option to apply online and upload supporting documents. 
+For additional assistance, please call 404.616.6920, and select option 1 to speak with a Patient Financial 
+Counselor. 
+ 
+7.3 Children’s at Hughes Spalding   
+Contact Information: 
+a. By email: financialcounselingdept@choa.org 
+b. By phone: 404.785.5060 
+c. By mail or in person at the following address: 
+Children’s at Hughes Spalding 
+35 Jesse Hill Jr. Dr. SE 
+Atlanta, Georgia 30303 
+Attn: Financial Assistance Program 
+d. Download the Financial Assistance Program Application from Grady’s website as follows: 
+Billing & Insurance | Grady Health 
+7.3.1 How to Apply 
+Complete, sign, and submit the Financial Assistance Program Application and required documents as outlined 
+in this policy to determine eligibility for financial assistance. 
+7.3.2 Required Documentation 
+When applying for financial assistance, individuals must provide the following documents: 
+a. Proof of Identity 
+Provide original or certified copies of acceptable identification and documentation to verify proof of identity, 
+including but not limited to: 
+1. Driver’s License (Georgia), State of Georgia ID Card, Any Consular ID, Credit Card with Picture, or 
+School Picture ID 
+2. Visa, Resident Alien Card, or other immigration documents issued by the U.S. Government 
+b. Proof of Residency 
+One to three of the following documents showing your current street address are required to prove 
+residency for at least 30 days from the application date (a PO Box address or junk mail does not demonstrate 
+residency): 
+1. Utility bills (e.g., power, gas, water, telephone) 
+2. Lease contract 
+ 
+Page 6 of 12 
+3. Rent receipt showing current address 
+4. Food stamps letter 
+5. Current voter registration card 
+6. Other business documents verifying residency (e.g., credit card statements, IRS or Medicaid letters, 
+school letters, cable bills, bank statements, mortgage statements, pay stubs showing address, etc.) 
+c. Proof of Income 
+Provide all applicable proof documents: 
+1. One to three current paycheck stubs (patient and spouse) 
+2. Social Security Administration letter for the current year 
+3. Unemployment claim, Department of Labor wage inquiry (if applicable), or recent bank statements if 
+living off savings 
+4. Letter from employer on company letterhead stating hourly pay rate, total pay per period, and pay 
+frequency 
+5. Official decision or award letters confirming an individual’s receipt of unemployment compensation, 
+Medicaid, Social Security Disability benefits, General Assistance, workers’ compensation, or 
+retirement benefits. 
+6. Food stamps letter and paycheck stubs (if applicable) 
+7. Verification of homelessness or letter from a shelter on company letterhead 
+8. Other business documents showing financial support 
+9. Previous year’s tax return 
+d. Proof of Number of Dependents 
+One of the following is required: 
+1. Previous year’s income tax return (most recent) 
+2. Decision letters indicating legal responsibility for the child, such as court-ordered guardianship or 
+custody papers 
+3. Birth certificates for each child age 18 and younger 
+7.3.3 Where to Return Completed Applications and Documents 
+Completed applications and required documents may be: 
+• 
+Delivered in person. 
+• 
+Mailed 
+Grady: 
+a. Financial Counseling Department – Patient Service Center (Main Hospital Lobby Level or Neighborhood 
+Health Center) 
+ 
+b. Mail to: 
+Grady Memorial Hospital 
+80 Jesse Hill Jr. Dr. SE 
+PO Box 26071 
+Atlanta, Georgia 30303 
+Attn: Financial Assistance Program   
+c. Financial Counseling Department 
+ 
+ 
+Page 7 of 12 
+ 
+d. Mail to: 
+Children’s at Hughes Spalding  
+35 Jesse Hill Jr. Dr. SE 
+Atlanta, Georgia 30303 
+Attn: Financial Assistance Program 
+e. Email: financialcounselingdept@choa.org 
+7.3.4 Available Assistance for Completing and/or Submitting the Application 
+Assistance is available to individuals who need help obtaining, completing, or submitting the Financial 
+Assistance Program Application. Individuals may contact the addresses listed above or visit any Financial 
+Counseling Office for support. 
+For telephone assistance, please contact: 
+• 
+Grady’s Financial Counseling Department at 404.616.6920 
+• 
+Children’s at Hughes Spalding Financial Counseling Department at 404.785.5060 
+8. NOTIFICATION FOR MANUAL FINANCIAL ASSISTANCE ELIGIBILITY  
+ 
+8.1 Under the manual process, if eligibility cannot be determined due to missing information and/or 
+documentation, the individual will receive written documentation outlining the required information and/or 
+documents needed to complete the application process.  
+ 
+9. FINANCIAL ASSISTANCE ELIGIBILITY  
+ 
+9.1 Eligibility Criteria 
+Eligibility for financial assistance is determined based on the patient’s county of residence, household size, 
+gross income, and alignment with the Federal Poverty Level (FPL) guidelines. 
+ 
+9.2 Primary Payment Sources 
+Patients with potential payment resources, such as commercial insurance or third-party liability coverage, 
+must fully utilize those sources before applying for support through Grady’s Financial Assistance Program. 
+ 
+9.3 Government Assistance Programs 
+Patients who qualify for any Federal or State assistance programs, including but not limited to Medicaid, 
+Medicare, Cancer State Aid, Medicare Savings Programs, or the Georgia Crime Victims Compensation 
+Program, are required to apply for and utilize those benefits prior to receiving assistance through Grady’s 
+Financial Assistance Program. Grady will support patients in the application process for these programs. 
+ 
+10. FINANCIAL ASSISTANCE DOES NOT COVER THE FOLLOWING:   
+ 
+a. Cosmetic/Plastic Elective Surgery  
+b. Visitor Visa Holders – Individuals receiving care who are in the country on a valid Visitor Visa 
+(e.g., B-1/B-2). 
+c. Accounts with unresolved third-party coverage or third-party liability coverage 
+ 
+11. MEDICARE BENEFICIARIES WHO QUALIFY FOR MEDICAID, OTHER THIRD-PARTY PAYER COVERAGE, OR 
+ARE DETERMINED TO BE INDIGENT 
+ 
+ 
+ 
+Page 8 of 12  
+ 
+11.1 Financial Assistance Screening for Medicare Patients 
+In accordance with CMS Publication 15-1, Section 312(B), Medicare beneficiaries will be assessed for financial 
+assistance eligibility based on indigency or charity care status. This assessment will determine the level of 
+discount applicable to the patient’s financial responsibility for services not covered by Medicare. All Medicare 
+patients with outstanding balances related to non-covered services will be screened for financial assistance 
+to determine potential eligibility for charity care discounts. 
+11.2 Medicare and Medicaid Non-Covered Services 
+• 
+Medicare: Patient responsibility for services not covered by Medicare (including deductibles, 
+coinsurance, and non-covered services) will be reviewed under this policy. Patients deemed eligible 
+through the charity care screening process will receive an appropriate discount applied to their self-
+pay balance. 
+• 
+Medicaid: Charges for non-covered services provided to Medicaid recipients will also be adjusted in 
+accordance with the patient’s approved financial assistance eligibility. 
+      
+12. FINANCIAL ASSISTANCE   
+The patient’s account will reflect both the Determination Type and Discount Level, categorized as follows: 
+ 
+Manual Determination 
+• 
+Approved-Fulton (Fulton County Resident) 
+• 
+Approved-DeKalb (DeKalb County Resident) 
+• 
+Approved-Other (Eligible residents outside of Fulton and DeKalb Counties) 
+• 
+Approved-Homeless Fulton 
+• 
+Approved-Homeless DeKalb 
+• 
+Approved-Ryan White 
+• 
+Approved-Title X Family Planning 
+• 
+Approved-Children’s at Hughes Spalding 
+ 
+13. INCOME GUIDELINES USED TO DETERMINE ELIGIBILITY FOR FINANCIAL ASSISTANCE & SUBSEQUENT 
+CHARITY CARE DISCOUNTS  
+13.1 Discount Levels with Copayments 
+Patients who meet all eligibility criteria for financial assistance will qualify for charity care discounts based on 
+their annual gross family income, family size, and county of residence. Eligibility is determined in accordance 
+with the current Financial Eligibility Scale and aligns with the following tiers: 
+• 
+Tier 1: Patients with annual gross family income up to 250% of the current Federal Poverty Level 
+(FPL) are eligible for financial assistance, subject to applicable copayments. 
+• 
+Tier 2: Patients with annual gross family income between 251% and 400% of the current Federal 
+Poverty Level (FPL) are eligible for financial assistance, subject to applicable copayments.  
+14. Who participates?   
+ 
+14.1 Participating Provider Groups  
+Physician groups and advanced practice providers participate in and adhere to Grady’s Financial Assistance 
+Program policy. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 9 of 12 
+ 
+15. AMOUNT GENERALLY BILLED (AGB) 
+Financial assistance discounts reduce patient balances to nominal copayment amounts, ensuring that no 
+patient eligible for financial assistance is billed more than the Amount Generally Billed (AGB) for emergency 
+or medically necessary care. 
+In compliance with Internal Revenue Code Section 501(r)(5), the AGB is calculated using the “look-back 
+method,” based on the average reimbursement rates received from Medicare and private health insurers for 
+the prior year’s claims for emergency and medically necessary services. The AGB is reviewed and updated at 
+least every three years to remain compliant with IRS regulations. 
+Patients who qualify for financial assistance will not be charged more than the AGB for emergency or 
+medically necessary care. 
+Requesting the AGB Calculation 
+Individuals may request a copy of the current AGB calculation free of charge by submitting a written request 
+to: 
+Grady Memorial Hospital 
+80 Jesse Hill Jr. Drive SE 
+P.O. Box 26071 
+Atlanta, Georgia 30303 
+Attn: Amount Generally Billed Inquiry – Financial Assistance Program 
+Children’s at Hughes Spalding 
+Telephone: (404) 785-5589 
+Fax: (404) 785-9236 
+Email: billing@choa.org 
+Attn: Amount Generally Billed Inquiry – Financial Assistance Program 
+16. Extraordinary Collection Actions (ECA) 
+Grady does not engage in Extraordinary Collection Actions (ECAs) in connection with self-pay balances for 
+emergency or medically necessary care. This includes actions taken by collection agencies on their behalf. 
+Specifically, Grady does not: 
+• 
+Report adverse information to consumer credit reporting agencies or credit bureaus; 
+• 
+Initiate legal or judicial actions (e.g., lawsuits, wage garnishment) to collect medical debt; 
+• 
+Require prepayment or deny medically necessary care due to a patient’s inability to pay or due to 
+outstanding balances; 
+• 
+Sell an individual’s debt to any third party. 
+17. FINANCIAL ASSISTANCE TIMEFRAME AND ELIGIBILITY DURATION 
+Defining When to Apply and How Long Eligibility Applies 
+17.1 Application Period 
+Patients may apply for financial assistance at any time prior to receiving services or within 240 days from the 
+date of the first post-discharge billing statement. 
+ 
+ 
+Page 10 of 12 
+Applications may be submitted by the patient or their authorized representative. A complete submission 
+includes the Financial Assistance Program (FAP) application and all required supporting documentation as 
+specified in this policy. 
+17.2 Application Review and Processing 
+All applications submitted within the designated period will be reviewed promptly and fairly, in accordance 
+with the procedures outlined in this policy. Applicants will be notified of the eligibility determination, and any 
+applicable discounts or adjustments will be retroactively applied to eligible accounts when appropriate. 
+17.3 Duration of Financial Assistance Eligibility 
+Eligibility for financial assistance under this policy includes both retroactive and prospective coverage, 
+defined as follows: 
+• 
+Retroactive Coverage (past services): 
+o 
+Approved financial assistance may be applied to qualifying medical services received up to 
+240 days prior to the application date. 
+• 
+Prospective Coverage (future services): 
+o 
+Once approved, financial assistance is typically valid for a period of 6 to 12 months from the 
+date of determination, depending on the patient’s financial situation and any updates to 
+eligibility criteria. 
+Patients are required to reapply and provide updated financial information at the end of the eligibility period 
+to maintain continued assistance. 
+18. Right to Reassess Financial Assistance Eligibility and Criteria 
+18.1 Reassessment of Eligibility Status 
+Grady reserves the right to reassess a patient’s eligibility for financial assistance when there is a material 
+change in financial status or when new information becomes available that could affect eligibility. 
+18.2 Review and Adjustment of Eligibility Criteria 
+Grady may update the eligibility criteria for the Financial Assistance Program to ensure it reflects community 
+needs and remains in compliance with regulatory and contractual obligations. Changes may occur in 
+response to: 
+1. Findings and priorities identified in the Community Health Needs Assessment (CHNA); 
+2. Changes in applicable federal, state, or local laws or regulations; or 
+3. Requirements under county contracts or agreements. 
+Any changes to the policy or eligibility criteria will be reflected in updated documentation and will be 
+communicated through the channels listed in Section 21. 
+19. Broad Public Availability of the Financial Assistance Program Policy 
+19.1 Public Access and Promotion 
+Grady Health System ensures that the Financial Assistance Program Policy (FAP), Application, and Plain 
+Language Summary (PLS), including translated versions are available free of charge to all patients and the 
+general public. These materials are distributed and promoted in the following ways: 
+• 
+Available to all patients at the time of registration. 
+ 
+Page 11 of 12 
+• 
+Made available at community healthcare partner locations. 
+• 
+Posted publicly online at: 
+https://www.gradyhealth.org/billing-and-insurance  
+(Includes the full policy, online application, and Plain Language Summary for download and printing) 
+19.2 Paper Copies Upon Request 
+Printed copies of the Financial Assistance Program Policy and Plain Language Summary are available free of 
+charge at the following locations: 
+• 
+Financial Counseling Office 
+• 
+Emergency Department 
+20. THE FINANCIAL ASSISTANCE PROGRAM POLICY (FAP) BROADLY PUBLICIZED       
+ 
+20.1 The Financial Assistance Program Policy (FAP), Application, and Plain Language                                  
+Summary and appropriate translations are made available free of charge to the public. Grady will make 
+concerted efforts to promote the Financial Assistance Program through  the Plain Language Summary 
+provided to all patients upon registration, on the hospital’s website, and through the display of signs 
+throughout the Health System.  This information may be obtained as follows:   
+ 
+• 
+All patients receive the Financial Assistance Program Plain Language Summary at the time of 
+registration. 
+• 
+The Plain Language Summary is available at community healthcare partners.   
+• 
+The Financial Assistance Program policy, Plain Language Summary, and application are displayed for 
+review and available electronically for printing and downloading from the Grady’s website as follows: 
+ 
+Billing/Insurance - gradyhealth.org/billing-and-insurance  
+Financial Assistance Program Policy and & Plain Language Summary  
+  
+20.2 Upon request, free paper copies of the FAP policy and Plain Language Summary are available from the 
+following:  
+ 
+Financial Counseling Office   
+Emergency Department  
+ 
+       
+21. CATASTROPHIC SITUATION – INSURANCE PREMIUM ASSISTANCE  
+ 
+21.1 In cases of catastrophic circumstances, such as a serious illness or injury resulting in a hospitalization of 
+10 days or more, or repeated hospitalizations that prevent the patient from working, Grady may provide 
+temporary financial assistance by paying insurance premiums directly to the insurer on the patient’s behalf. 
+ 
+This assistance may be offered when: 
+• 
+The patient is unable to work due to their medical condition; 
+• 
+The patient is at risk of losing insurance coverage due to non-payment of premiums; and 
+• 
+The patient meets all other criteria for financial assistance under this policy. 
+ 
+Each situation will be evaluated on a case-by-case basis to determine eligibility and appropriate level of 
+support. 
+ 
+ 
+ 
+ 
+Page 12 of 12 
+ 
+22. EXCEPTIONS TO THIS POLICY 
+ 
+The Executive Director of Financial Clearance, Vice President of Revenue Cycle, Vice President of 
+Compliance/Chief Compliance Officer, and the Chief Financial Officer of Grady Health System are authorized 
+to grant exceptions to the eligibility and determination criteria outlined in this Policy. Such exceptions may be 
+made on a case-by-case basis when deemed appropriate, based on the specific circumstances of an 
+individual patient. 
+ 
+23. POLICY APPROVAL FOR ADOPTION  
+Grady Board of Directors – Finance Committee  
+Monday, March 12, 2018  
+ 
+Grady Board of Directors – Finance Committee  
+Monday, July 9, 2018   
+ 
+Chief Financial Officer (Party Authorized to Adopt Policy) 
+March 20, 2026  
+  
+24. FINANCIAL ASSISTANCE POLICY Dates: 
+ 
+EFFECTIVE DATE: February 4, 2009 
+ 
+REVISION DATES:  
+• 
+April 15, 2009 
+• 
+August 3, 2009 
+• 
+February 15, 2011 
+• 
+March 19, 2014,  
+• 
+January 11, 2016 
+• 
+November 11, 2016 
+• 
+November 1, 2017 
+• 
+December 20, 2017 
+• 
+March 1, 2018 
+• 
+April 23, 2018 
+• 
+June 14, 2018 
+• 
+May 30, 2025 
+• 
+October 3, 2025 
+• 
+November 14, 2025 
+ 
