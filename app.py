@@ -67,8 +67,8 @@ def init():
     client = chromadb.PersistentClient(path="index")
     try:
         collection = client.get_collection("medical_docs")
-        if collection.count() == 0:
-            raise Exception("empty")
+        if collection.count() < 50:
+            raise Exception("rebuild")
     except:
         docs = load_documents("data")
         chunks = chunk_documents(docs)
