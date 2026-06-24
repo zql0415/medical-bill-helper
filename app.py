@@ -82,7 +82,7 @@ def init():
         metadatas = [{"source": c["source"]} for c in chunks]
         collection.add(documents=texts, ids=ids, metadatas=metadatas)
     api_key = os.getenv("ANTHROPIC_API_KEY") or st.secrets.get("ANTHROPIC_API_KEY")
-anthropic_client = anthropic.Anthropic(api_key=api_key)
+    anthropic_client = anthropic.Anthropic(api_key=api_key)
     return collection, anthropic_client
 
 def search(collection, query, n=5):
