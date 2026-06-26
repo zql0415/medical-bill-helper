@@ -115,7 +115,6 @@ with st.sidebar:
     st.write("- Grady Memorial Hospital")
     st.write("- Emory Healthcare")
     st.write("- Piedmont Healthcare")
-    st.write("- Piedmont Healthcare")
     st.divider()
     st.write("**Example questions:**")
     if st.button("I can't afford my bill"):
