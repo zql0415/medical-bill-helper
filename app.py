@@ -85,7 +85,7 @@ def init():
     anthropic_client = anthropic.Anthropic(api_key=api_key)
     return collection, anthropic_client
 
-def search(collection, query, n=5):
+def search(collection, query, n=8):
     results = collection.query(query_texts=[query], n_results=n)
     return results["documents"][0], [m["source"] for m in results["metadatas"][0]]
 
