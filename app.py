@@ -1,181 +1,195 @@
 import os
-import requests
-import pymupdf
+import base64
 import chromadb
 import anthropic
 import streamlit as st
-from dotenv import load_dotenv
 
-load_dotenv()
 
-# 启动时自动下载PDF
-PDF_SOURCES = {
-    "grady_policy.pdf": "https://www.gradyhealth.org/wp-content/uploads/Financial-Assistance-Program-Policy-1.pdf",
-    "emory_summary.pdf": "https://www.emoryhealthcare.org/-/media/Project/EH/Emory/ui/pdfs/insurance/financial-assistance/plain-language-summary-ehc-financial-assistance-policy-2026-final-04-01-2026-aod.pdf"
-}
+def detect_media_type(file_bytes):
+    if file_bytes[:4] == b'\x89PNG':
+        return "image/png"
+    elif file_bytes[:2] == b'\xff\xd8':
+        return "image/jpeg"
+    elif file_bytes[:4] == b'%PDF':
+        return "application/pdf"
+    else:
+        return "image/png"
 
-def download_pdfs():
-    os.makedirs("data", exist_ok=True)
-    for filename, url in PDF_SOURCES.items():
-        filepath = os.path.join("data", filename)
-        if not os.path.exists(filepath):
-            try:
-                r = requests.get(url, timeout=30)
-                if r.status_code == 200 and len(r.content) > 1000:
-                    with open(filepath, "wb") as f:
-                        f.write(r.content)
-            except:
-                pass
-
-def load_documents(data_dir="data"):
-    docs = []
-    for filename in os.listdir(data_dir):
-        filepath = os.path.join(data_dir, filename)
-        if filename.endswith(".pdf"):
-            try:
-                doc = pymupdf.open(filepath)
-                text = ""
-                for page in doc:
-                    text += page.get_text()
-                doc.close()
-                if text.strip():
-                    docs.append({"filename": filename, "content": text})
-            except:
-                pass
-        elif filename.endswith(".txt"):
-            with open(filepath, "r", encoding="utf-8") as f:
-                text = f.read()
-            docs.append({"filename": filename, "content": text})
-    return docs
-
-def chunk_documents(docs, chunk_size=800, overlap=100):
-    chunks = []
-    for doc in docs:
-        content = " ".join(doc["content"].split())
-        start = 0
-        while start < len(content):
-            end = start + chunk_size
-            chunk_text = content[start:end]
-            if chunk_text.strip():
-                chunks.append({"text": chunk_text.strip(), "source": doc["filename"]})
-            start = end - overlap
-    return chunks
 
 @st.cache_resource
 def init():
-    download_pdfs()
     client = chromadb.PersistentClient(path="index")
-    try:
-        collection = client.get_collection("medical_docs")
-        if collection.count() < 110:
-            raise Exception("rebuild")
-    except:
-        docs = load_documents("data")
-        chunks = chunk_documents(docs)
-        try:
-            client.delete_collection("medical_docs")
-        except:
-            pass
-        collection = client.create_collection("medical_docs")
-        texts = [c["text"] for c in chunks]
-        ids = [f"chunk_{i}" for i in range(len(chunks))]
-        metadatas = [{"source": c["source"]} for c in chunks]
-        collection.add(documents=texts, ids=ids, metadatas=metadatas)
-    api_key = os.getenv("ANTHROPIC_API_KEY") or st.secrets.get("ANTHROPIC_API_KEY")
-    anthropic_client = anthropic.Anthropic(api_key=api_key)
-    return collection, anthropic_client
+    collection = client.get_collection("medical_docs")
+    ac = anthropic.Anthropic(
+        api_key=os.getenv("ANTHROPIC_API_KEY") or st.secrets.get("ANTHROPIC_API_KEY")
+    )
+    return collection, ac
 
-def search(collection, query, n=8):
+
+def search(collection, query, n=5):
     results = collection.query(query_texts=[query], n_results=n)
-    return results["documents"][0], [m["source"] for m in results["metadatas"][0]]
+    docs = results["documents"][0]
+    sources = [m["source"] for m in results["metadatas"][0]]
+    return docs, sources
 
-def answer(anthropic_client, query, docs, sources):
+
+def extract_bill_items(ac, file_bytes, media_type):
+    b64 = base64.standard_b64encode(file_bytes).decode("utf-8")
+    if media_type == "application/pdf":
+        content_block = {"type": "document", "source": {"type": "base64", "media_type": "application/pdf", "data": b64}}
+    else:
+        content_block = {"type": "image", "source": {"type": "base64", "media_type": media_type, "data": b64}}
+    msg = ac.messages.create(
+        model="claude-sonnet-4-6",
+        max_tokens=1500,
+        messages=[{"role": "user", "content": [
+            content_block,
+            {"type": "text", "text": """You are a medical bill analyst. Extract all line items from this medical bill.
+
+Return a structured list in this exact format (one item per line):
+- [Service/Charge Name]: $[Amount] | [Date if visible] | [Code if visible]
+
+After the list, add:
+TOTAL BILLED: $[amount]
+INSURANCE PAID: $[amount or "Not shown"]
+PATIENT RESPONSIBILITY: $[amount or "Not shown"]
+
+Include every charge, fee, and adjustment shown."""}
+        ]}]
+    )
+    return msg.content[0].text
+
+
+def analyze_bill(ac, collection, extracted_text):
+    query = "financial assistance patient cannot afford bill uninsured"
+    docs, sources = search(collection, query)
     context = "\n\n---\n\n".join(docs)
-    system = """You are a helpful assistant that helps people understand medical bills and financial assistance options in Atlanta, Georgia.
-Answer questions based ONLY on the provided documents. If the answer is not in the documents, say so clearly.
-Be specific, practical, and compassionate. The user may be stressed about medical bills.
-Always mention relevant phone numbers, deadlines, or next steps when available.
-Keep answers concise but complete."""
-    message = anthropic_client.messages.create(
+    msg = ac.messages.create(
+        model="claude-sonnet-4-6",
+        max_tokens=1500,
+        system="""You are a compassionate medical billing advocate helping patients in Atlanta, Georgia.
+You have access to financial assistance policies from Grady Memorial Hospital and Emory Healthcare.
+Be specific, practical, and empathetic.""",
+        messages=[{"role": "user", "content": f"""Here is a patient's medical bill:
+
+{extracted_text}
+
+Here are the financial assistance policies from local hospitals:
+{context}
+
+Please provide:
+1. **Bill Summary** - What services were billed and whether amounts seem typical
+2. **Red Flags** - Any charges that seem unusual or worth questioning
+3. **Financial Assistance Options** - What programs might help based on hospital policies
+4. **Next Steps** - Specific actions: who to call, what to ask for
+
+Be practical and actionable."""}]
+    )
+    return msg.content[0].text, list(set(sources))
+
+
+def answer_question(ac, collection, query):
+    docs, sources = search(collection, query)
+    context = "\n\n---\n\n".join(docs)
+    msg = ac.messages.create(
         model="claude-sonnet-4-6",
         max_tokens=1000,
-        system=system,
+        system="""You are a helpful assistant helping people understand medical bills and financial assistance in Atlanta, Georgia.
+Answer based ONLY on the provided documents. Be specific, practical, and compassionate.""",
         messages=[{"role": "user", "content": f"Documents:\n{context}\n\nQuestion: {query}"}]
     )
-    return message.content[0].text, list(set(sources))
+    return msg.content[0].text, list(set(sources))
 
-# UI
+
+st.set_page_config(page_title="Medical Bill Helper", page_icon="🏥", layout="wide")
 st.title("🏥 Medical Bill Helper")
-st.caption("Ask questions about medical bills and financial assistance in Atlanta")
+st.caption("Upload your medical bill for analysis, or ask questions about financial assistance in Atlanta")
 
 with st.sidebar:
     st.header("About")
-    st.write("This tool helps you understand medical bills and find financial assistance at Atlanta hospitals.")
-    st.write("**Data sources:**")
-    st.write("- Grady Memorial Hospital")
-    st.write("- Emory Healthcare")
-    st.write("- Piedmont Healthcare")
+    st.write("This tool helps Atlanta residents understand medical bills and find financial assistance.")
+    st.write("**Knowledge base:**")
+    st.write("• Grady Memorial Hospital")
+    st.write("• Emory Healthcare")
+    st.write("• Piedmont Healthcare")
     st.divider()
     st.write("**Example questions:**")
     if st.button("I can't afford my bill"):
-        st.session_state.pending_query = "I can't afford my medical bill. What can I do?"
-        st.rerun()
+        st.session_state.pending_q = "I can't afford my medical bill. What can I do?"
     if st.button("How do I apply for help?"):
-        st.session_state.pending_query = "How do I apply for financial assistance?"
-        st.rerun()
+        st.session_state.pending_q = "How do I apply for financial assistance?"
     if st.button("Income limits for all 3?"):
-        st.session_state.pending_query = "What are the income limits for Grady, Emory, and Piedmont financial assistance?"
-        st.rerun()
+        st.session_state.pending_q = "What are the income limits for financial assistance at Grady, Emory, and Piedmont?"
     st.divider()
-    st.caption("⚠️ This tool provides general information only and does not constitute legal or medical advice.")
+    st.caption("⚠️ General information only. Not legal or medical advice.")
 
-if "messages" not in st.session_state:
-    st.session_state.messages = []
+tab1, tab2 = st.tabs(["📄 Upload & Analyze My Bill", "💬 Ask a Question"])
 
-for msg in st.session_state.messages:
-    with st.chat_message(msg["role"]):
-        st.write(msg["content"])
-        if msg.get("sources"):
-            st.caption(f"Sources: {', '.join(msg['sources'])}")
+with tab1:
+    st.subheader("Upload Your Medical Bill")
+    st.write("Upload a photo or PDF of your bill — we'll extract all charges and explain your options.")
+    uploaded = st.file_uploader("Choose a file", type=["jpg", "jpeg", "png", "pdf"], help="Supported: JPG, PNG, PDF")
 
-# 处理按钮触发的问题
-if "pending_query" in st.session_state:
-    query = st.session_state.pop("pending_query")
-    st.session_state.messages.append({"role": "user", "content": query})
-    with st.chat_message("user"):
-        st.write(query)
-    with st.chat_message("assistant"):
-        with st.spinner("Looking up information..."):
-            try:
-                collection, anthropic_client = init()
-                docs, sources = search(collection, query)
-                response, unique_sources = answer(anthropic_client, query, docs, sources)
-                st.write(response)
-                st.caption(f"Sources: {", ".join(unique_sources)}")
-                st.session_state.messages.append({"role": "assistant", "content": response, "sources": unique_sources})
-            except Exception as e:
-                import traceback
-                st.error(f"Error: {e}")
-                st.code(traceback.format_exc())
+    if uploaded:
+        col1, col2 = st.columns([1, 1])
+        with col1:
+            if uploaded.type.startswith("image"):
+                st.image(uploaded, caption="Uploaded bill", width='stretch')
+            else:
+                st.info(f"📄 PDF uploaded: **{uploaded.name}** ({uploaded.size // 1024} KB)")
+        with col2:
+            st.write("**File details:**")
+            st.write(f"• Name: {uploaded.name}")
+            st.write(f"• Type: {uploaded.type}")
+            st.write(f"• Size: {uploaded.size:,} bytes")
+        st.divider()
 
-if query := st.chat_input("Ask about your medical bill..."):
-    st.session_state.messages.append({"role": "user", "content": query})
-    with st.chat_message("user"):
-        st.write(query)
-    with st.chat_message("assistant"):
-        with st.spinner("Looking up information..."):
-            try:
-                collection, anthropic_client = init()
-                docs, sources = search(collection, query)
-                response, unique_sources = answer(anthropic_client, query, docs, sources)
-                st.write(response)
-                st.caption(f"Sources: {', '.join(unique_sources)}")
-                st.session_state.messages.append({
-                    "role": "assistant",
-                    "content": response,
-                    "sources": unique_sources
-                })
-            except Exception as e:
-                import traceback
-                st.error(f"Error: {e}")
-                st.code(traceback.format_exc())
+        if st.button("🔍 Analyze This Bill", type="primary", use_container_width=True):
+            file_bytes = uploaded.read()
+            media_type = detect_media_type(file_bytes)
+            with st.spinner("Step 1/2: Reading your bill..."):
+                try:
+                    collection, ac = init()
+                    extracted = extract_bill_items(ac, file_bytes, media_type)
+                except Exception as e:
+                    st.error(f"Error reading bill: {e}")
+                    st.stop()
+            st.success("✅ Bill items extracted!")
+            with st.expander("📋 Extracted Line Items", expanded=True):
+                st.text(extracted)
+            with st.spinner("Step 2/2: Analyzing charges and finding assistance options..."):
+                try:
+                    analysis, sources = analyze_bill(ac, collection, extracted)
+                except Exception as e:
+                    st.error(f"Error analyzing bill: {e}")
+                    st.stop()
+            st.subheader("💡 Analysis & Recommendations")
+            st.markdown(analysis)
+            st.caption(f"Based on policies from: {', '.join(sources)}")
+
+with tab2:
+    st.subheader("Ask About Financial Assistance")
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+    for msg in st.session_state.messages:
+        with st.chat_message(msg["role"]):
+            st.markdown(msg["content"])
+            if msg.get("sources"):
+                st.caption(f"Sources: {', '.join(msg['sources'])}")
+    pending = st.session_state.pop("pending_q", None)
+    if query := (st.chat_input("Ask about your medical bill...") or pending):
+        st.session_state.messages.append({"role": "user", "content": query})
+        with st.chat_message("user"):
+            st.markdown(query)
+        with st.chat_message("assistant"):
+            with st.spinner("Looking up information..."):
+                try:
+                    collection, ac = init()
+                    response, sources = answer_question(ac, collection, query)
+                    st.markdown(response)
+                    st.caption(f"Sources: {', '.join(sources)}")
+                    st.session_state.messages.append({"role": "assistant", "content": response, "sources": sources})
+                except Exception as e:
+                    import traceback
+                    st.error(f"Error: {e}")
+                    st.code(traceback.format_exc())
