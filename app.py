@@ -114,14 +114,16 @@ with st.sidebar:
     st.write("**Data sources:**")
     st.write("- Grady Memorial Hospital")
     st.write("- Emory Healthcare")
+    st.write("- Piedmont Healthcare")
+    st.write("- Piedmont Healthcare")
     st.divider()
     st.write("**Example questions:**")
     if st.button("I can't afford my bill"):
         st.session_state.example = "I can't afford my medical bill. What can I do?"
     if st.button("How do I apply for help?"):
         st.session_state.example = "How do I apply for financial assistance?"
-    if st.button("Grady vs Emory?"):
-        st.session_state.example = "What's the difference between Grady and Emory financial assistance?"
+    if st.button("Compare all 3 hospitals"):
+        st.session_state.example = "Compare financial assistance at Grady, Emory, and Piedmont. Which is most generous?"
     st.divider()
     st.caption("⚠️ This tool provides general information only and does not constitute legal or medical advice.")
 
