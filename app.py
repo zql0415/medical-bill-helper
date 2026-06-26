@@ -67,7 +67,7 @@ def init():
     client = chromadb.PersistentClient(path="index")
     try:
         collection = client.get_collection("medical_docs")
-        if collection.count() < 50:
+        if collection.count() < 110:
             raise Exception("rebuild")
     except:
         docs = load_documents("data")
