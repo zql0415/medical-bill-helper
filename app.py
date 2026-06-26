@@ -121,7 +121,7 @@ with st.sidebar:
         st.session_state.example = "I can't afford my medical bill. What can I do?"
     if st.button("How do I apply for help?"):
         st.session_state.example = "How do I apply for financial assistance?"
-    if st.button("Compare all 3 hospitals"):
+    if st.button("Income limits for all 3?"):
         st.session_state.example = "What are the income limits for Grady, Emory, and Piedmont financial assistance?"
     st.divider()
     st.caption("⚠️ This tool provides general information only and does not constitute legal or medical advice.")
