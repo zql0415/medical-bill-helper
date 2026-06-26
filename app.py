@@ -118,11 +118,14 @@ with st.sidebar:
     st.divider()
     st.write("**Example questions:**")
     if st.button("I can't afford my bill"):
-        st.session_state.example = "I can't afford my medical bill. What can I do?"
+        st.session_state.pending_query = "I can't afford my medical bill. What can I do?"
+        st.rerun()
     if st.button("How do I apply for help?"):
-        st.session_state.example = "How do I apply for financial assistance?"
+        st.session_state.pending_query = "How do I apply for financial assistance?"
+        st.rerun()
     if st.button("Income limits for all 3?"):
-        st.session_state.example = "What are the income limits for Grady, Emory, and Piedmont financial assistance?"
+        st.session_state.pending_query = "What are the income limits for Grady, Emory, and Piedmont financial assistance?"
+        st.rerun()
     st.divider()
     st.caption("⚠️ This tool provides general information only and does not constitute legal or medical advice.")
 
@@ -134,6 +137,26 @@ for msg in st.session_state.messages:
         st.write(msg["content"])
         if msg.get("sources"):
             st.caption(f"Sources: {', '.join(msg['sources'])}")
+
+# 处理按钮触发的问题
+if "pending_query" in st.session_state:
+    query = st.session_state.pop("pending_query")
+    st.session_state.messages.append({"role": "user", "content": query})
+    with st.chat_message("user"):
+        st.write(query)
+    with st.chat_message("assistant"):
+        with st.spinner("Looking up information..."):
+            try:
+                collection, anthropic_client = init()
+                docs, sources = search(collection, query)
+                response, unique_sources = answer(anthropic_client, query, docs, sources)
+                st.write(response)
+                st.caption(f"Sources: {", ".join(unique_sources)}")
+                st.session_state.messages.append({"role": "assistant", "content": response, "sources": unique_sources})
+            except Exception as e:
+                import traceback
+                st.error(f"Error: {e}")
+                st.code(traceback.format_exc())
 
 if query := st.chat_input("Ask about your medical bill..."):
     st.session_state.messages.append({"role": "user", "content": query})
